@@ -15,6 +15,15 @@ share {
 
 	plugin Extract => 'zip';
 
+	patch sub {
+		Path::Tiny->new("kiwi/variable.h")->edit_utf8(sub {
+			s/private:\n/$&friend int* get_refcount( kiwi::Variable* obj );/s;
+		});
+		Path::Tiny->new("kiwi/constraint.h")->edit_utf8(sub {
+			s/private:\n/$&friend int* get_refcount( kiwi::Constraint* obj );/s;
+		});
+	};
+
 	build [
 		sub {
 			my ($build) = @_;
