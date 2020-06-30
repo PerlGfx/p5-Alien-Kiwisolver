@@ -20,7 +20,6 @@ EOF
 
 subtest "Testing constraints" => sub {
 	Inline->import( with => 'Alien::Kiwisolver' );
-	Inline->import( CPP => config => ccflagsex => '-std=c++11' );
 	Inline->bind( CPP => <<'EOF' );
 using namespace kiwi;
 
