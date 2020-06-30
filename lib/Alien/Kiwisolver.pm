@@ -16,6 +16,8 @@ sub Inline {
 	if( $lang =~ /^CPP$/ ) {
 		my $params = Alien::Base::Inline(@_);
 
+		$params->{CCFLAGSEX} = '-std=c++11';
+
 		$params->{PRE_HEAD} = <<'		EOF';
 		#if defined(_MSC_VER) || defined(__MINGW32__)
 		#  define NO_XSLOCKS /* To avoid Perl wrappers of C library */
