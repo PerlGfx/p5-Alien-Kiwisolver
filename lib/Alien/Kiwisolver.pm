@@ -40,4 +40,4 @@ This module supports L<Inline's with functionality|Inline/"Playing 'with' Others
 
 L<Kiwi solver|https://kiwisolver.readthedocs.io/>
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Alien-Kiwisolver/>
+
