@@ -1,3 +1,25 @@
+NEXT
+
+  Features
+
+   - ~
+
+  Refactoring
+
+   - ~
+
+  Bug fixes
+
+   - Update release branch for download to main. Thanks to SREZIC for the bug
+     report.
+
+     See <https://rt.cpan.org/Ticket/Display.html?id=134847>.
+
+  Build changes
+
+   - ~
+
+
 0.001 2020-10-17 00:09:32-0500
 
   Features
