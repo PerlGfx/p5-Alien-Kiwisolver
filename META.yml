@@ -26,6 +26,7 @@ recommends:
   Inline::CPP: '0'
 requires:
   Alien::Base: '0.038'
+  URI: '0'
   parent: '0'
   perl: '5.006'
   strict: '0'
@@ -33,7 +34,7 @@ requires:
 resources:
   homepage: https://github.com/Intertangle/p5-Alien-Kiwisolver
   repository: https://github.com/Intertangle/p5-Alien-Kiwisolver.git
-version: '0.002'
+version: 0.002_001
 x_alienfile:
   generated_by: 'Dist::Zilla::Plugin::AlienBuild version 0.31'
   requires:

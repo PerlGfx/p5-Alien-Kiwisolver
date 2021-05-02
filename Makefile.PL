@@ -25,6 +25,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Alien::Kiwisolver",
   "PREREQ_PM" => {
     "Alien::Base" => "0.038",
+    "URI" => 0,
     "parent" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -33,7 +34,7 @@ my %WriteMakefileArgs = (
     "Test::Most" => 0,
     "Test::Needs" => 0
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.002_001",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -47,6 +48,7 @@ my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => "6.52",
   "Test::Most" => 0,
   "Test::Needs" => 0,
+  "URI" => 0,
   "parent" => 0,
   "strict" => 0,
   "warnings" => 0
