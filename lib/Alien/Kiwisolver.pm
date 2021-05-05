@@ -22,6 +22,12 @@ sub Inline {
 		#if defined(_MSC_VER) || defined(__MINGW32__)
 		#  define NO_XSLOCKS /* To avoid Perl wrappers of C library */
 		#endif
+
+		#ifdef __cplusplus
+			// Avoid Perl's "seed" macro that breaks <algorithm> by including <algorithm> first.
+			#include <algorithm>
+		#endif
+
 		EOF
 
 		return $params;
