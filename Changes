@@ -1,3 +1,10 @@
+0.002_002 «»
+
+  Bug fixes
+
+   - C++ headers: Avoid Perl's "seed" macro that breaks <algorithm> by
+     including <algorithm> first.
+
 0.002_001 2021-05-02 11:41:12-0400
 
   Bug fixes
