@@ -1,8 +1,8 @@
 package Alien::Kiwisolver;
 # ABSTRACT: Alien package for the Kiwi C++ implementation of the Cassowary constraint solving algorithm
-$Alien::Kiwisolver::VERSION = '0.002_001'; # TRIAL
+$Alien::Kiwisolver::VERSION = '0.002_002'; # TRIAL
 
-$Alien::Kiwisolver::VERSION = '0.002001';
+$Alien::Kiwisolver::VERSION = '0.002002';
 use strict;
 use warnings;
 
@@ -24,6 +24,12 @@ sub Inline {
 		#if defined(_MSC_VER) || defined(__MINGW32__)
 		#  define NO_XSLOCKS /* To avoid Perl wrappers of C library */
 		#endif
+
+		#ifdef __cplusplus
+			// Avoid Perl's "seed" macro that breaks <algorithm> by including <algorithm> first.
+			#include <algorithm>
+		#endif
+
 		EOF
 
 		return $params;
@@ -45,7 +51,7 @@ Alien::Kiwisolver - Alien package for the Kiwi C++ implementation of the Cassowa
 
 =head1 VERSION
 
-version 0.002_001
+version 0.002_002
 
 =head1 Inline support
 

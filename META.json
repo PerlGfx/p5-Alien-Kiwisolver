@@ -60,7 +60,7 @@
          "web" : "https://github.com/Intertangle/p5-Alien-Kiwisolver"
       }
    },
-   "version" : "0.002_001",
+   "version" : "0.002_002",
    "x_alienfile" : {
       "generated_by" : "Dist::Zilla::Plugin::AlienBuild version 0.31",
       "requires" : {
