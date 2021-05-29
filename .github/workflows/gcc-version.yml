@@ -45,6 +45,7 @@ jobs:
           path: ./build-dir
   ci-containers:
     needs: dist
+    name: "Run with GCC ${{ matrix.gcc }} (should fail?: ${{ matrix.fails || false }}) "
     runs-on: ubuntu-latest
     container: 
     strategy:
