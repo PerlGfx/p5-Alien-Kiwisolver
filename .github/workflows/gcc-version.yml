@@ -52,7 +52,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { gcc: '4.4', fails: true }
+          #- { gcc: '4.4', fails: true }
           - { gcc: '4.6', fails: true }
           - { gcc: '4.8' }
           - { gcc: '6' }
