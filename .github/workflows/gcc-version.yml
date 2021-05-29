@@ -87,7 +87,7 @@ jobs:
          echo "::endgroup::"
 
          echo "::group::setup cpanm"
-         ( apt-get update || true ) && apt-get install -y --no-install-recommends curl git unzip libssl-dev zlib1g-dev
+         ( apt-get update || true ) && apt-get install -y --force-yes --no-install-recommends curl git unzip libssl-dev zlib1g-dev
          # libnet-ssleay-perl: Installed version (1.42) of Net::SSLeay is not in range '1.46'
          curl -L https://cpanmin.us | perl - App::cpanminus
          cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
