@@ -32,7 +32,6 @@ jobs:
         run: |
           eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
           cpanm -n Dist::Zilla
-          cpanm -n git://github.com/zmughal/extutils-cppguess.git@standard-version-flag
           dzil authordeps --missing | cpanm -n
       - name: Make distribution
         shell: bash
@@ -96,7 +95,6 @@ jobs:
          cd /workdir
 
          echo "::group::install dependencies"
-         cpanm -n git://github.com/zmughal/extutils-cppguess.git@standard-version-flag
          cpanm --notest --installdeps .
          cpanm --notest HTTP::Tiny
          cpanm --notest Inline::CPP
