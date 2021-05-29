@@ -5,14 +5,17 @@ use warnings;
 
 use ExtUtils::CppGuess;
 
+my $guess = ExtUtils::CppGuess->new;
+my $cppstdflag = $guess->cpp_standard_flag('C++11');
+
+die "Need to have full C++11 support, compiler @{[ (split ' ', $guess->compiler_command)[0] ]} only supports $cppstdflag"
+	if ( $guess->is_gcc || $guess->is_clang ) && $cppstdflag =~ /\Qc++0x\E/;
+
 share {
 	requires 'Net::SSLeay' => 0;
 	requires 'IO::Socket::SSL' => 0;
 	requires 'File::Copy::Recursive' => 0;
 	requires 'Path::Tiny' => 0;
-
-	my $guess = ExtUtils::CppGuess->new;
-	my $cppstdflag = $guess->cpp_standard_flag('C++11');
 
 	plugin Download => (
 		url => 'https://github.com/nucleic/kiwi/archive/main.zip',
