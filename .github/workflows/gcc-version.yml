@@ -51,8 +51,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { gcc: '4.4' }
-          - { gcc: '4.6' }
+          - { gcc: '4.4', fails: true }
+          - { gcc: '4.6', fails: true }
           - { gcc: '4.8' }
           - { gcc: '6' }
           - { gcc: '7' }
@@ -95,13 +95,14 @@ jobs:
          cd /workdir
 
          echo "::group::install dependencies"
-         cpanm --notest --installdeps .
+         cpanm --verbose --notest --installdeps . || true
          cpanm --notest HTTP::Tiny
          cpanm --notest Inline::CPP
          echo "::endgroup::"
 
          echo "::group::run tests"
          export PERL5OPT="-MInline=noisy"
-         cpanm --verbose --test-only --test-args TEST_VERBOSE=1 .
+         ${{ fromJSON('[ "", "!" ]')[ matrix.fails || false ] }} \
+           cpanm --verbose --test-only --test-args TEST_VERBOSE=1 .
          echo "::endgroup::"
          EOF
