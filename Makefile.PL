@@ -12,11 +12,13 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "Alien::Build" => "0.32",
     "Alien::Build::MM" => "0.32",
-    "ExtUtils::MakeMaker" => "6.52"
+    "ExtUtils::MakeMaker" => "6.52",
+    "URI" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "Alien::Build" => "0.32",
     "Alien::Build::MM" => "0.32",
+    "ExtUtils::CppGuess" => "0.22",
     "ExtUtils::MakeMaker" => "6.52"
   },
   "DISTNAME" => "Alien-Kiwisolver",
@@ -25,7 +27,6 @@ my %WriteMakefileArgs = (
   "NAME" => "Alien::Kiwisolver",
   "PREREQ_PM" => {
     "Alien::Base" => "0.038",
-    "URI" => 0,
     "parent" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -34,7 +35,7 @@ my %WriteMakefileArgs = (
     "Test::Most" => 0,
     "Test::Needs" => 0
   },
-  "VERSION" => "0.002_002",
+  "VERSION" => "0.002_003",
   "test" => {
     "TESTS" => "t/*.t"
   }

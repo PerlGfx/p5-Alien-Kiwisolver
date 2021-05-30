@@ -1,3 +1,13 @@
+0.002_003 2021-05-30 13:09:53-0400
+
+  Bug fixes
+
+   - Use C++ standard flag from ExtUtils::CppGuess to determine if C++
+     compiler has support for C++11.
+
+     See <https://github.com/Intertangle/p5-Alien-Kiwisolver/pull/9>,
+     <https://github.com/tsee/extutils-cppguess/pull/24>.
+
 0.002_002 2021-05-05 19:58:56-0400
 
   Bug fixes
