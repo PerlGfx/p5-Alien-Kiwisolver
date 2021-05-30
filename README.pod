@@ -8,7 +8,7 @@ Alien::Kiwisolver - Alien package for the Kiwi C++ implementation of the Cassowa
 
 =head1 VERSION
 
-version 0.002_002
+version 0.002_003
 
 =head1 Inline support
 
