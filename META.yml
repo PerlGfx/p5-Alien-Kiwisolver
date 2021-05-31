@@ -35,7 +35,7 @@ requires:
 resources:
   homepage: https://github.com/Intertangle/p5-Alien-Kiwisolver
   repository: https://github.com/Intertangle/p5-Alien-Kiwisolver.git
-version: 0.002_003
+version: '0.003'
 x_alienfile:
   generated_by: 'Dist::Zilla::Plugin::AlienBuild version 0.31'
   requires:

@@ -1,8 +1,6 @@
 package Alien::Kiwisolver;
 # ABSTRACT: Alien package for the Kiwi C++ implementation of the Cassowary constraint solving algorithm
-$Alien::Kiwisolver::VERSION = '0.002_003'; # TRIAL
-
-$Alien::Kiwisolver::VERSION = '0.002003';
+$Alien::Kiwisolver::VERSION = '0.003';
 use strict;
 use warnings;
 
@@ -51,7 +49,7 @@ Alien::Kiwisolver - Alien package for the Kiwi C++ implementation of the Cassowa
 
 =head1 VERSION
 
-version 0.002_003
+version 0.003
 
 =head1 Inline support
 
